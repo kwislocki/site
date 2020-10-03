@@ -1,0 +1,24 @@
+name: "Kit Wislocki" 
+output_dir: "."
+navbar:
+  title: "Kit Wislocki)
+  type: inverse
+  left:
+    - text: "Home"
+      icon: fa-home
+      href: index.html
+    - text: "About"
+      icon: fa-user 
+      href: about.html
+    - text: "CV"
+      icon: fa-file-pdf-o
+      href: cv.html
+  right:
+    - text: "Contact"
+      icon: fa-envelope-o
+      href: mailto:kit.wislocki@gmail.com
+
+output:
+  html_document:
+    theme: cosmo
+    highlight: textmate 
