@@ -2,7 +2,7 @@
 title: "Welcome!"
 ---
 
-![](images/me.jpg)
+![](images/me.jpeg)
 
 I am currently a clinical research coordinator at the University of Pennsylvania's Perelman School of Medicine. I serve as the lead clinical research coordinator on an NIMH-funded project utilizing behavioral economics, clinical psychology, and implementation science to improve the uptake of evidence-based practices for suicide prevention in primary care and specialty mental health settings. Additionally, I work on other projects that explore the effect of trauma exposure on clinical decision-making and treatment.
 
