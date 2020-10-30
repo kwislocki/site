@@ -63,6 +63,7 @@ Funds ($500) awarded for academic excellence.
 **PI: Dr. Emily Becker-Haimes**
 
 - Serve as lead research coordinator for an NIMH-funded administrative supplement to the Penn ALACRITY Center aimed at improving implementation of evidence-based practices for suicide prevention  
+
 - Oversee data collection, data analysis, and data management for multiple projects at the intersection of clinical psychology, implementation science, and behavioral economics  
 
 - Lead design of a website to house materials to support suicide screening and assessment for use by community partners  
@@ -120,7 +121,6 @@ Funds ($500) awarded for academic excellence.
 - Managed administrative work for a government office serving a population of 1.13 million  
 
 - Facilitated constituent communication, office data, political outreach, issues research, and media review  
-
 - Developed campaigns and presentations relating to legislative issues  
 
 ***
@@ -198,7 +198,7 @@ Funds ($500) awarded for academic excellence.
 
 - Qualtrics (mastery) 
 
-- SPSS (proficient) 
+- SPSS (mastery) 
 
 - Python (beginner) 
 
