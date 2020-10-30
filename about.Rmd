@@ -20,11 +20,7 @@ __Want [more information](https://www.who.int/emergencies/diseases/novel-coronav
 
 ### 2. In the woods! ###
 
-<<<<<<< HEAD
-I love to hike and spend time outside. I took a class in college on mushrooms and fungi, and have since become an amateur mycologist. Here are a few of my favorites that I've found:
-=======
 I love to hike and spend time outside. I took a class in college on mushrooms and fungi and have since become an amateur mycologist. Here are a few of my favorites that I've found:
->>>>>>> 008e2d15027e66bf804f0b030014334514c1cd4f
 
 ![](images/fungi.jpeg)  
 
