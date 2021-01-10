@@ -194,7 +194,7 @@ carried out data analysis and class-related administrative tasks
 
 - SPSS (mastery) 
 
-- Python (beginner) 
+- Python (intermediate) 
 
 - Excel (mastery) 
 
