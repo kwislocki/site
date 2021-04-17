@@ -2,15 +2,13 @@
 title: My CV
 ---
 
-<a href="kw_cv.pdf" download>Download</a>
-
 # Education: #
 
-**University of Pennsylvania, Philadelphia, PA (2019-Present)**  
+**University of Pennsylvania, Philadelphia, PA**  
 Masters & Post-Baccalaureate Student  
 Overall GPA: 4.00  
 
-**The Ohio State University, Columbus, OH (2015-2018)**  
+**The Ohio State University, Columbus, OH**  
 Bachelor of Arts, Spring 2018   
 _summa cum laude_  
 Major: Political Science  
