@@ -2,18 +2,16 @@
 title: "Welcome!"
 ---
 
-I am currently a clinical research coordinator at the University of Pennsylvania's Perelman School of Medicine. I serve as the lead clinical research coordinator on an NIMH-funded project utilizing behavioral economics, clinical psychology, and implementation science to improve the uptake of evidence-based practices for suicide prevention in primary care and specialty mental health settings. Additionally, I work on other projects that explore the effect of trauma exposure on clinical decision-making and treatment.
+<div style="overflow: auto;">
 
-**My Research Interests:**
+  <img src="profile_picture.jpg" alt="My photo" width="150" style="float: right; margin-right: 20px; margin-bottom: 10px; border-radius: 8px; box-shadow: 2px 2px 6px rgba(0,0,0,0.1);">
 
-- Improving clinical outcomes in underserved and trauma-exposed individuals with psychopathology
+I am currently a Doctoral Candidate in Clinical Psychology at the University of California, Irvine. I'm a mental health professional, researcher, and computer scientist (and sometimes all three at the same time!). My research focuses on the intersection of mental health and advanced technologies. I will be applying for clinical internship in 2026-2027. 
 
-- Factors that interfere with the effectiveness of evidence-based treatments for trauma-exposed populations
+You can find past work of mine [here](https://scholar.google.com/citations?user=tV5UcbwAAAAJ&hl=en)
 
-- Modifying existing interventions and treatments to improve uptake and clinical effectiveness among trauma-exposed populations
-
-- mHealth, eHealth, and technology-assisted interventions that can be leveraged to improve access to evidence-based treatments and interventions
+</div>
 
 <br> 
 
-__I am entering a PhD program in Clinical Psychology in Fall 2021. If you have any questions or concerns for me, feel free to [email me](mailto:kit.wislocki@gmail.com)!__
+__Interested in collaborating? [Reach out](mailto:kwislock@uci.edu)!__

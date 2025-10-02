@@ -4,17 +4,36 @@ title: "About Me"
 
 ## Outside of my work, you can find me: ##
 
-<br>
+<div style="display: flex; align-items: flex-start; gap: 20px;">
 
+<div style="flex: 1; max-width: 300px;">
+  
+### Hiking!
 
-### Staying safe & getting vaccinated! ###
+I love to hike and identify plants and fungi.
 
-Here are some ways that you can stay safe during the COVID-19 pandemic!
+<img src="fungi.001.jpeg" alt="Fungi on a hike" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 
-![](https://media.giphy.com/media/SsNnE066ZyWmeNLtyJ/giphy.gif)
-<br>
+</div>
 
-__Want [more information](https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public) on how to stay safe?__
+<div style="flex: 2;">
 
-<br> 
+### Reading!
 
+Some books that have been on my mind recently:
+
+- [The Alignment Problem](https://www.goodreads.com/book/show/53429525-the-alignment-problem)
+- [The Urge](https://www.goodreads.com/book/show/32701181-the-urge)
+- [If Anyone Builds It, Everyone Dies](https://www.goodreads.com/book/show/61429152-if-anyone-builds-it-everyone-dies)
+
+### Watching Movies!
+
+Here are a few favorites of mine recently:
+
+- [Sing Sing](https://www.imdb.com/title/tt0081326/)
+- [The Substance](https://www.imdb.com/title/tt26466964/)
+- [The Sound of Music](https://www.imdb.com/title/tt0059742/)
+
+</div>
+
+</div>

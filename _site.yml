@@ -14,10 +14,14 @@ navbar:
       icon: fa-user 
       href: about.html
 
-
+include:
+  - CV_KW_091625.pdf
+  
 output:
   html_document:
     theme: cosmo
     highlight: textmate 
     includes:
       after_body: footer.html
+      
+

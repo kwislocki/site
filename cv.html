@@ -1,37 +1,50 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
 
-<title>My CV</title>
+<title>Research</title>
 
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
 
 <style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
 <script type="text/javascript">
 if (window.hljs) {
   hljs.configure({languages: []});
@@ -44,32 +57,8 @@ if (window.hljs) {
 
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
+
+
 
 
 
@@ -79,10 +68,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -99,40 +84,16 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 51px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h2 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h3 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h4 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h5 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h6 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -160,7 +121,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -172,7 +133,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -182,11 +143,28 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.parent().addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -198,13 +176,12 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -212,16 +189,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -234,6 +204,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -264,7 +235,7 @@ $(document).ready(function () {
 <div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -302,174 +273,50 @@ $(document).ready(function () {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
-<h1 class="title toc-ignore">My CV</h1>
+<h1 class="title toc-ignore">Research</h1>
 
 </div>
 
 
-<div id="education" class="section level1">
-<h1>Education:</h1>
-<p><strong>University of Pennsylvania, Philadelphia, PA</strong><br />
-Masters &amp; Post-Baccalaureate Student<br />
-Overall GPA: 4.00</p>
-<p><strong>The Ohio State University, Columbus, OH</strong><br />
-Bachelor of Arts<br />
-<em>summa cum laude</em><br />
-Major: Political Science<br />
-Overall GPA: 4.00</p>
-<hr />
-</div>
-<div id="awards-honors" class="section level1">
-<h1>Awards &amp; Honors</h1>
-<ul>
-<li><p>2020: ABCT Dissemination and Implementation Science Special Interest Group<br />
-Student Poster Award Finalist</p></li>
-<li><p>2019: Dean’s List, University of Pennsylvania</p></li>
-<li><p>2018: Lawrence J. Herson Award, Ohio State University<br />
-Funds ($500) awarded for academic excellence</p></li>
-<li><p>2015-2018: Dean’s List, Ohio State University</p></li>
-</ul>
-<hr />
-</div>
-<div id="publications" class="section level1">
-<h1>Publications</h1>
-<ol style="list-style-type: decimal">
-<li><p>Davis, M., Wolk, C. B., Jager-Hyman, S., Beidas, R. S., Young, J. F., Mautone, J. A., Buttenheim, A. M., Mandell, D. S., Volpp, K. G., <strong>Wislocki, K.</strong>, Futterer, A., Marx, D., Dieckmeyer, E. L., &amp; Becker- Haimes, E. M. (2020). Implementing nudges for suicide prevention in real-world environments: project INSPIRE study protocol. Pilot and Feasibility Studies, 6, 143. <a href="https://doi.org/10.1186/s40814-020-00686-y" class="uri">https://doi.org/10.1186/s40814-020-00686-y</a>.</p></li>
-<li><p>Becker-Haimes, E. M., <strong>Wislocki. K.</strong>, DiDonato, S., Beidas, R.S., &amp; Jensen-Doss, A. (revise &amp; resubmit). Youth trauma histories are associated with under-diagnosis and under-treatment of co-occurring youth psychiatric symptoms. Journal of Clinical Child and Adolescent Psychology.</p></li>
-<li><p>Becker-Haimes, E. M., <strong>Wislocki. K.</strong>, DiDonato, S., &amp; Jensen-Doss, A. (under review). Predictors of mental health clinicians’ self-efficacy in treating youth exposed to trauma. Journal of Traumatic Stress.</p></li>
-</ol>
-<hr />
-</div>
-<div id="presentations" class="section level1">
-<h1>Presentations</h1>
-<ol style="list-style-type: decimal">
-<li><p>Becker-Haimes, E. M., <strong>Wislocki. K.</strong>, DiDonato, S., Beidas, R.S., &amp; Jensen-Doss, A. (2020, November). Clinician Diagnostic Bias: Obsessive-Compulsive Disorder is Misdiagnosed When There is a Co-occurring Trauma History. In Buchholz, J. (Chair), Addressing Diagnostic Challenges in Obsessive-Compulsive Disorder, Psychosis, and Autism Spectrum Disorder. Symposium to be presented at the annual meeting of the Association for Behavioral and Cognitive Therapies, Philadelphia, PA.</p></li>
-<li><p>Jager-Hyman, S., Becker-Haimes, E., Wolk, C. B., Davis, M., Beidas, R. S., <strong>Wislocki, K.</strong>, Futterer, A., Marx, D., Young, J. F., Mautone, K. A., &amp; Buttenheim, A. M. (2020, November). Application of behavioral economics strategies to improve provider use of evidence-based suicide prevention strategies in primary care. In A. Dopp (Chair), Novel intervention and implementation approaches to improve behavioral health care access and outcomes in primary care settings. Symposium to be presented at the annual meeting of the Association for Behavioral and Cognitive Therapies, Philadelphia, PA.</p></li>
-</ol>
-<hr />
-</div>
-<div id="posters" class="section level1">
-<h1>Posters</h1>
-<ol style="list-style-type: decimal">
-<li><p><strong>Wislocki, K.</strong>, Becker-Haimes, E. M., Wolk, C. B., Davis, M., Jager-Hyman, S., Futterer, A., Marx, D., Young, J. F., Mautone, J. A., Beidas, R. S. (2020). Variability in Attitudes towards Safety Planning Across Provider Type. Poster to be presented at the annual meeting of the Association for Behavioral and Cognitive Therapies Convention, Philadelphia, PA.</p></li>
-<li><p><strong>Wislocki, K.</strong>, Jensen-Doss, A., DiDonato, S., Beidas, R. S., &amp; Becker-Haimes, E. (2020). Youth Trauma Exposure and Under-Treatment of Co-Occurring Mental Health Concerns. Poster to be presented at the annual meeting of the Association for Behavioral and Cognitive Therapies Convention, Philadelphia, PA.</p></li>
-<li><p>Davis, M., Siegel, J., Becker-Haimes, E., Jager-Hyman, S., Beidas, R.S., <strong>Wislocki, K.</strong>, Futterer, A., Young, J.F., Mautone, J.A., Buttenheim, A.M., &amp; Wolk, C.B. (2020). Barriers and facilitators to evidence-based suicide screening, assessment, and intervention in primary care and specialty mental health settings. Poster to be presented at the virtual Annual Conference on the Science of Dissemination and Implementation in Health.</p></li>
-</ol>
-<hr />
-</div>
-<div id="professional-experience" class="section level1">
-<h1>Professional Experience</h1>
-<p><strong>Clinical Research Coordinator, Center for Mental Health, Perelman School of Medicine at the University of Pennsylvania — Autumn 2019 – Present</strong></p>
-<p><strong>PI: Dr. Emily Becker-Haimes</strong></p>
-<ul>
-<li><p>Serve as lead research coordinator for an NIMH-funded administrative supplement to the Penn ALACRITY Center aimed at improving implementation of evidence-based practices for suicide prevention</p></li>
-<li><p>Oversee data collection, data analysis, and data management for multiple projects at the intersection of clinical psychology, implementation science, and behavioral economics</p></li>
-<li><p>Lead design of a website to house materials to support suicide screening and assessment for use by community partners</p></li>
-<li><p>Assist with grant-writing, research proposals, and manuscript submissions for current and future projects</p></li>
-<li><p>Lead communication with community stakeholders for implementation projects</p></li>
-<li><p>Provide support to other interdisciplinary projects at the Center for Mental Health</p></li>
-</ul>
-<p><strong>Academic Performance Analyst, Columbus City Schools — Autumn 2018 – Summer 2019</strong></p>
-<ul>
-<li><p>Conducted data collection, analysis, and reporting for 25+ urban public schools</p></li>
-<li><p>Led instruction on data, programs, and professional development for educators and administrators in a public school district of 50,000+ students</p></li>
-<li><p>Developed socio-emotional and academic data models for relevant stakeholders</p></li>
-<li><p>Assisted with grant-writing, research proposals, program implementation, policy development, and school improvement efforts</p></li>
-</ul>
-<p><strong>Research Assistant, Ohio State University — Winter 2018 – Summer 2018</strong></p>
-<p><strong>PI: Dr. Erin Lin</strong></p>
-<ul>
-<li><p>Lead research assistant on an interdisciplinary project analyzing the long-term impacts of conflict in Cambodia</p></li>
-<li><p>Collaborated on-site in Cambodia with NGOs to perform data collection in areas contaminated with unexploded ordnance</p></li>
-<li><p>Planned, conducted, and transcribed household interviews with community stakeholders</p></li>
-<li><p>Contributed to research protocols, grant applications, and budget management</p></li>
-</ul>
-<p><strong>Marketing Intern, Virginia Arts Festival — Summer 2017</strong></p>
-<ul>
-<li><p>Performed social media management, copywriting, digital marketing, and data analytics for regional arts non-profit</p></li>
-<li><p>Managed social media development, engagement, and reach/impact analysis; increased outreach and involvement across all platforms</p></li>
-<li><p>Developed and launched new partnerships with community organizations</p></li>
-</ul>
-<p><strong>Office Assistant, Baker West Hall, Ohio State University — Autumn 2016 – Spring 2017</strong></p>
-<ul>
-<li><p>Served as an administrative liaison for 400+ person residence hall</p></li>
-<li><p>Facilitated management of issues involving data, policy, security, and community development</p></li>
-<li><p>Performed extensive duties relating to resident communication, university services, and initiative management</p></li>
-</ul>
-<p><strong>Intern, Office of the Fairfax County Chairman of the Board of Supervisors — Summer 2016</strong></p>
-<ul>
-<li><p>Managed administrative work for a government office serving a population of 1.13 million</p></li>
-<li><p>Facilitated constituent communication, office data, political outreach, issues research, and media review</p></li>
-<li><p>Developed campaigns and presentations relating to legislative issues</p></li>
-</ul>
-<hr />
-</div>
-<div id="clinical-experience" class="section level1">
-<h1>Clinical Experience</h1>
-<p><strong>Resilience Coach, Coping First Aid Program, Perelman School of Medicine at the University of Pennsylvania — Spring 2020 – Present</strong></p>
-<ul>
-<li><p>Provided brief psychosocial support via telehealth platform, grounded in principles of Psychological First Aid to individuals in and around Penn Medicine to support healthcare and other frontline workers experiencing distress as a result of the COVID-19 pandemic</p></li>
-<li><p>Attended weekly supervision with a licensed psychologist</p></li>
-</ul>
-<p><strong>Resident Advisor, Baker West Hall, Ohio State University — Autumn 2017 – Spring 2018</strong></p>
-<ul>
-<li><p>Guided project/event planning, community engagement, and development for 400+ person residence hall</p></li>
-<li><p>Led efforts related to administration, residence life, policy enforcement, and community involvement</p></li>
-<li><p>Exercised crisis resolution and management functions</p></li>
-</ul>
-<hr />
-</div>
-<div id="professional-memberships" class="section level1">
-<h1>Professional Memberships</h1>
-<ul>
-<li>Association for Behavioral and Cognitive Therapies (ABCT)</li>
-</ul>
-<hr />
-</div>
-<div id="institutional-service-other-experience" class="section level1">
-<h1>Institutional Service &amp; Other Experience</h1>
-<p><strong>Coordinator, Workgroup to Improve Black Representation at the Penn Center for Mental Health — Summer 2020 – Present</strong></p>
-<ul>
-<li><p>Created, administered, and analyzed workplace survey data to inform workgroup agenda</p></li>
-<li><p>Contributed to policy changes to increase Black representation within Penn’s Center for Mental Health</p></li>
-<li><p>Assisted with creation and implementation of protocols to increase equity in hiring processes</p></li>
-<li><p>Performed administrative tasks on behalf of the workgroup</p></li>
-</ul>
-<p><strong>Development Volunteer, Coping First Aid Program Perelman School of Medicine at University of Pennsylvania — Spring 2020 – Present</strong></p>
-<ul>
-<li><p>Contributed to the development and expansion of the Coping First Aid program</p></li>
-<li><p>Volunteered key administrative support to the Coping First Aid program under direct supervision of the Coping First Aid program directors to facilitate its rapid expansion</p></li>
-</ul>
-<p><strong>Advisor, Baker West Activities Council, Ohio State University — Summer 2018 – Spring 2019</strong></p>
-<ul>
-<li><p>Supervised community development and outreach for 400+ person residence hall</p></li>
-<li><p>Executed project planning, marketing, oversight, and management of 50+ programs</p></li>
-<li><p>Won various grants and awards for events (including Hall of the Year award — granted to one residence hall a year)</p></li>
-<li><p>Acted as a mentor, leader, and advisor to executive board members</p></li>
-</ul>
-<p><strong>Teaching Assistant, Department of Philosophy, Ohio State University — Winter 2016 – Spring 2016</strong></p>
-<ul>
-<li><p>Directly assisted 50+ students who were struggling academically</p></li>
-<li><p>Facilitated in-class support, strategic planning, and class attendance/ participation; carried out data analysis and class-related administrative tasks</p></li>
-<li><p>Contributed to lesson planning and curriculum development for multiple sections of ESEPHL 3410: Philosophy of Education</p></li>
-</ul>
-<hr />
-</div>
-<div id="skills" class="section level1">
-<h1>Skills</h1>
-<ul>
-<li><p>R (mastery)</p></li>
-<li><p>SPSS (mastery)</p></li>
-<li><p>Python (intermediate)</p></li>
-<li><p>Excel (mastery)</p></li>
-<li><p>REDCap (mastery)</p></li>
-<li><p>Qualtrics (mastery)</p></li>
-</ul>
-</div>
+<p>My research focuses on the intersection of mental health and advanced
+technologies. Currently, I find myself designing and conducting research
+focused on the following topics:</p>
+<p><strong>Current Research Areas:</strong></p>
+<p><strong>Enhancing dynamic prediction of mental health symptoms
+through individualized modeling strategies using technology</strong></p>
+<p>Accurately predicting changes in mental health symptoms requires
+approaches that reflect each person’s unique patterns. By using
+individualized modeling strategies powered by technology, we can monitor
+real-time data to anticipate symptom changes and intervene
+earlier—leading to more timely, personalized, and effective mental
+health care.</p>
+<p><strong>Ensuring the safe and effective use of artificial
+intelligence with individuals experiencing mental health
+problems</strong></p>
+<p>As AI continues to proliferate, ensuring their safety and
+effectiveness is critical, especially for vulnerable individuals. Robust
+design, clinical oversight, and ethical safeguards are essential to
+prevent harm, reduce bias, and support the use of this technology.</p>
+<p><strong>Improving evidence-based mental health assessment and
+intervention for trauma-exposed populations</strong></p>
+<p>Trauma exposure can negatively impact one’s physical and mental
+health. Advancing evidence-based tools and interventions tailored to
+trauma-exposed populations helps ensure more accurate diagnosis,
+effective treatment, and better long-term outcomes for those who have
+experienced trauma.</p>
+<p><strong>Increasing access to mental health care through
+technology</strong></p>
+<p>Many people face barriers to accessing mental health care. Technology
+offers scalable, flexible solutions to help bridge these gaps, expanding
+access to support and resources for those who need care.</p>
+<p>You can find a copy of my CV below:</p>
+<iframe src="CV_KW_091625.pdf" width="100%" height="600px">
+<a href="CV_KW_091625.pdf">Download PDF</a>.
+</iframe>
 
 &nbsp;
 <hr />
@@ -495,7 +342,7 @@ Funds ($500) awarded for academic excellence</p></li>
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
@@ -513,7 +360,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>
